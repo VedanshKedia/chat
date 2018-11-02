@@ -1,0 +1,17 @@
+
+<div class="messagebox" #vedansh [scrollTop]="vedansh.scrollHeight">
+
+    <p *ngFor="let message of messages">
+      {{selectedProfile.username}} : {{message}}
+    </p>
+
+  <p id="tmp">{{temp}}</p>
+
+</div>
+
+<div class="inputbox">
+      <input type="text" [(ngModel)]="tempmessage" placeholder="Enter Message" (click)="typing()">
+      <br>
+      <button type="button" (click) = "addmessage()" (click) = "nottyping()">Send</button>
+</div>
+<p>Sending message as <span>{{selectedProfile.username}}</span></p>
